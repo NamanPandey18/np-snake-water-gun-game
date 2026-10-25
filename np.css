@@ -1,0 +1,281 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #172554, #080b18 65%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 20px;
+    overflow-x: hidden;
+}
+
+/* Main Heading */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(25px, 5vw, 42px);
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 45px;
+    color: #5dffb0;
+    text-shadow:
+        0 0 10px rgba(93, 255, 176, 0.7),
+        0 0 25px rgba(93, 255, 176, 0.3);
+}
+
+/* Options Container */
+.opts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Individual Option Cards */
+.opt {
+    width: 300px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px solid rgba(93, 255, 176, 0.25);
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    overflow: hidden;
+}
+
+/* Images */
+.opt img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+}
+
+/* Water SVG */
+#water svg {
+    width: 250px;
+    height: 250px;
+    background-color: #ffffff;
+}
+
+/* Gun Image */
+#gun img {
+    width: 250px;
+    height: 250px;
+}
+
+/* Hover Effect */
+.opt:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: #5dffb0;
+    background: rgba(93, 255, 176, 0.08);
+    box-shadow:
+        0 0 15px rgba(93, 255, 176, 0.25),
+        0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.opt:hover img {
+    transform: scale(1.08);
+}
+
+/* Active Click Effect */
+.opt:active {
+    transform: scale(0.96);
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin-top: 55px;
+    padding: 25px 50px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual Score */
+.score {
+    /* text-align: center; */
+    min-width: 100px;
+}
+
+/* Score Numbers */
+.score p:first-child {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: #5dffb0;
+    margin-bottom: 8px;
+    text-shadow: 0 0 15px rgba(93, 255, 176, 0.3);
+}
+
+/* Player Names */
+.score p:last-child {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #cbd5e1;
+}
+
+/* Message Container */
+.msgb {
+    margin-top: 35px;
+    text-align: center;
+}
+
+/* Game Message */
+.msg {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #16a34a, #059669);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 20px rgba(22, 163, 74, 0.3);
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.green {
+    background: green;
+}
+
+.red {
+    background: red;
+}
+
+/* .msg:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: linear-gradient(135deg, #059669, #16a34a);
+    box-shadow: 0 10px 30px rgba(22, 163, 74, 0.6);
+}
+
+.msg:active {
+    transform: scale(0.96);
+} */
+
+
+/* Responsive Design: Tablets */
+@media (max-width: 850px) {
+    .opts {
+        gap: 20px;
+    }
+
+    .opt {
+        width: 220px;
+        height: 235px;
+    }
+
+    .opt img {
+        width: 190px;
+        height: 190px;
+    }
+
+    #gun img {
+        width: 190px;
+        height: 190px;
+    }
+    #water svg{
+        width: 190px;
+        height: 190px;
+    }
+    .scoreboard {
+        gap: 40px;
+        padding: 22px 35px;
+    }
+}
+
+/* Responsive Design: Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 35px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 1.5px;
+        margin-bottom: 30px;
+    }
+
+    .opts {
+        gap: 15px;
+    }
+
+    .opt {
+        width: min(100%, 280px);
+        height: 210px;
+    }
+
+    .opt img {
+        width: 145px;
+        height: 145px;
+    }
+
+    #water svg {
+        width: 155px;
+        height: 155px;
+    }
+
+    #gun img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .scoreboard {
+        width: 100%;
+        max-width: 350px;
+        gap: 20px;
+        padding: 20px 15px;
+        margin-top: 35px;
+    }
+
+    .score {
+        min-width: 90px;
+    }
+
+    .score p:first-child {
+        font-size: 34px;
+    }
+
+    .score p:last-child {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    #msg {
+        padding: 13px 20px;
+        font-size: 15px;
+    }
+}

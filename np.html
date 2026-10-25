@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="np.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>SNACK WATER GUN </h1>
+    <div class="opts">
+        <div class="opt" id="snake">
+            <img src="snake.jpg" width="175px" height="175px">
+        </div>
+        <div class="opt" id="water">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+                <circle cx="100" cy="100" r="90" fill="#E1F5FE" stroke="#03A9F4" stroke-width="6" />
+                <path
+                    d="M 100,35 C 100,35 145,95 145,125 C 145,150 125,168 100,168 C 75,168 55,150 55,125 C 55,95 100,35 100,35 Z"
+                    fill="#29B6F6" />
+                <path
+                    d="M 70,125 C 80,135 90,115 100,125 C 110,135 120,115 130,125 C 130,140 118,155 100,155 C 82,155 70,140 70,125 Z"
+                    fill="#0288D1" opacity="0.6" />
+                <ellipse cx="82" cy="95" rx="8" ry="16" transform="rotate(-30 82 95)" fill="#FFFFFF" opacity="0.6" />
+            </svg>
+
+        </div>
+        <div class="opt" id="gun">
+            <img src="gun.avif" width="250px" height="250px">
+        </div>
+    </div>
+    <div class="scoreboard">
+        <div class="score">
+            <p id="us">0</p>
+            <p>YOU</p>
+        </div>
+        <div class="score">
+            <p id="cs">0</p>
+            <p>COMPUTER</p>
+        </div>
+    </div>
+    <div class="msgb">
+        <p id="msg" class="msg ">PLAY YOUR CHANCE</p>
+    </div>
+    <script src="np.js"></script>
+</body>
+
+</html>
